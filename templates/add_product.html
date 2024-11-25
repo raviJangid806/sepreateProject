@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:/www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Product - {{ companyName }}</title>
+  <link rel="stylesheet" href="/static/css/addProduct_style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+<!-- Product Insert Form -->
+<div class="container mt-5 content-section">
+  <div class="section-title">
+    <h1>Product Details</h1>
+  </div>
+  <form action="/api/admins/add-product-db" method="POST">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="productName">Product Name</label>
+        <input type="text" class="form-control" id="productName" name="name" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="productDescription">Description</label>
+        <textarea class="form-control" id="productDescription" name="description" rows="3" required></textarea>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="productPrice">Price</label>
+        <input type="number" class="form-control" id="productPrice" name="price" required>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="productStock">Stock Quantity</label>
+        <input type="number" class="form-control" id="productStock" name="stockQuantity" required>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="productImage">Product Image URL</label>
+        <input type="url" class="form-control" id="productImage" name="productImage" required>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="productCategory">Category</label>
+        <select id="productCategory" name="category" class="form-control" required>
+          <option selected disabled value="">Choose...</option>
+          <option value="Electrical Components">Electrical Components</option>
+          <option value="Safety Equipment">Safety Equipment</option>
+          <option value="Cables">Cables</option>
+          <option value="Transformers">Transformers</option>
+          <option value="Others">Others</option>
+        </select>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="productWarranty">Warranty (in years)</label>
+        <input type="number" class="form-control" id="productWarranty" name="warranty" required>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Product</button>
+  </form>
+</div>
+
+
+<!-- footer -->
+<div th:insert="fragments :: footer"></div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  // Add a scroll event listener to change navbar style
+  window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+      } else {
+          navbar.classList.remove('scrolled');
+      }
+  });
+</script>
+</body>
+</html>

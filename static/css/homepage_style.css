@@ -1,0 +1,80 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Light background for the entire page */
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background when scrolling */
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh; /* Full height for the hero section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('/static/image/home.jpg') no-repeat center center/cover; /* Background image */
+}
+
+/* About Section */
+.card {
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Card */
+.flip-card {
+    perspective: 1000px;
+}
+
+.flip-card .card {
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .card {
+    transform: rotateY(180deg);
+}
+
+.flip-card .card-body {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+/* Contact Section */
+section {
+    padding: 60px 0;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        height: auto; /* Adjust height for smaller screens */
+        padding: 60px 20px; /* Add padding for mobile */
+    }
+    .navbar {
+        font-size: 14px; /* Reduce font size on mobile */
+    }
+}

@@ -1,0 +1,65 @@
+/* Background Gradient */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: #333;
+}
+
+/* Login Container Styling */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Form Label Styling */
+.form-group label {
+    font-weight: 600;
+    color: #555;
+}
+
+/* Button Styling */
+.btn-login {
+    width: 100%;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn-login:hover {
+    background: linear-gradient(90deg, #2575fc, #6a11cb);
+}
+
+/* Header Styling */
+.login-header {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2575fc;
+    margin-bottom: 20px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

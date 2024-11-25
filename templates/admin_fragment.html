@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Home - Ravi Enterprises</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/admin_styleC.css"> <!-- Custom Styles -->
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div th:fragment="header" class="bg-dark text-white p-3" style="width: 250px; height: 100vh;">
+        <h4 class="mb-4">Admin Dashboard</h4>
+        <ul class="nav flex-column">
+            <li class="nav-item"><a href="/admin/dashboard" class="nav-link text-white">Dashboard</a></li>
+            <li class="nav-item"><a href="/admin/orders" class="nav-link text-white">Orders</a></li>
+            <li class="nav-item"><a href="/templates/admin_all_product.html" class="nav-link text-white">Products</a></li>
+            <li class="nav-item"><a href="/templates/add_product.html" class="nav-link text-white">Add Product</a></li>
+            <li class="nav-item"><a href="/admin/customers" class="nav-link text-white">Customers</a></li>
+            <li class="nav-item"><a href="/admin/reports" class="nav-link text-white">Reports</a></li>
+        </ul>
+    </div>
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
