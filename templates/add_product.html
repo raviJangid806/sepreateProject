@@ -13,7 +13,10 @@
 <body>
 
 <!-- Product Insert Form -->
-<div class="container mt-5 content-section">
+
+<div class="d-flex">
+  <div th:insert="admin_fragment :: header"></div>
+<div class="container  m-5 content-section">
   <div class="section-title">
     <h1>Product Details</h1>
   </div>
@@ -62,10 +65,7 @@
     <button type="submit" class="btn btn-primary">Add Product</button>
   </form>
 </div>
-
-
-<!-- footer -->
-<div th:insert="fragments :: footer"></div>
+</div>
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
